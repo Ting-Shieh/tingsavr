@@ -16,10 +16,11 @@ def index():
                 <script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
             </head>
             <body style='margin : 0px; overflow: hidden;'>
+                <h1>Try!!</h1>
                 <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
                     <a-marker type='pattern' url='../res/maker.patt'>
                         <a-entity position='-3 2 0' text="width: 5; value:I am Psyduck. We are pokemon. We love you"></a-entity>
-                        <a-entity position='0 0 0' gltf-model="url(../res/scene.gltf)"></a-entity>
+                        <a-entity position='0 0 0' gltf-model='url(../res/scene.gltf)'></a-entity>
                     </a-marker>
                 </a-scene>
             </body>
