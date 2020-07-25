@@ -20,7 +20,7 @@ def index():
                 <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
                     <a-marker type='pattern' url='./res/maker.patt'>
                         <a-entity position='-3 2 0' text="width: 5; value:This is test"></a-entity>
-                        <a-entity position='0 0 0' gltf-model='url(./res/scene.gltf)'></a-entity>
+                        <a-entity position='0 0 0' gltf-model='url(res/scene.gltf)'></a-entity>
                     </a-marker>
                     <a-entity camera></a-entity>
                 </a-scene>
