@@ -22,6 +22,7 @@ def index():
                         <a-entity position='-3 2 0' text="width: 5; value:I am Psyduck. We are pokemon. We love you"></a-entity>
                         <a-entity position='0 0 0' gltf-model='url(res/scene.gltf)'></a-entity>
                     </a-marker>
+                    <a-entity camera></a-entity>
                 </a-scene>
             </body>
             </html>
