@@ -1,0 +1,92 @@
+<!--<html>-->
+<!--  <head>-->
+<!--    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
+<!--    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <a-scene physics>-->
+<!--      <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>-->
+<!--      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>-->
+<!--      <a-sky color="#ECECEC"></a-sky>-->
+<!--    </a-scene>-->
+<!--  </body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Particle System Component Example</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+            <!--注册组件的JS，一般写在外部JS中，这里为了现实方便放在页面内部JS中。-->
+        <script type="text/javascript">
+            //随机颜色
+            AFRAME.registerComponent('random-color', {
+              schema: {
+                min: {default: {x: 0, y: 0, z: 0}, type: 'vec3'},
+                max: {default: {x: 1, y: 1, z: 1}, type: 'vec3'}
+              },
+
+              update: function () {
+                var data = this.data;
+                var max = data.max;
+                var min = data.min;
+                this.el.setAttribute('material', 'color', '#' + new THREE.Color(
+                  Math.random() * max.x + min.x,
+                  Math.random() * max.y + min.y,
+                  Math.random() * max.z + min.z
+                ).getHexString());
+              }
+            });
+            //随机位置
+            AFRAME.registerComponent('random-position', {
+              schema: {
+                min: {default: {x: -10, y: -10, z: -10}, type: 'vec3'},
+                max: {default: {x: 10, y: 10, z: 10}, type: 'vec3'}
+              },
+
+              update: function () {
+                var data = this.data;
+                var max = data.max;
+                var min = data.min;
+                this.el.setAttribute('position', {
+                  x: Math.random() * (max.x - min.x) + min.x,
+                  y: Math.random() * (max.y - min.y) + min.y,
+                  z: Math.random() * (max.z - min.z) + min.z
+                });
+              }
+            });
+            //生成盒子
+            AFRAME.registerComponent('entity-generator', {
+              schema: {
+                mixin: {default: ''},
+                num: {default: 1000}
+              },
+
+              init: function () {
+                var data = this.data;
+
+                // 使用指定的mixin生成实体
+                for (var i = 0; i < data.num; i++) {
+                  var entity = document.createElement('a-entity');
+                  entity.setAttribute('mixin', data.mixin);
+                  this.el.appendChild(entity);
+                }
+              }
+            });
+        </script>
+  </head>
+ <body>
+        <a-scene>
+            <!--资源库-->
+            <a-assets>
+                <!--利用混合的方式定制模版-->
+                <a-mixin id="random" geometry="primitive: box" random-position random-color>
+                </a-mixin>
+            </a-assets>
+            <!--生成实体-->
+            <a-entity entity-generator="mixin:random;num:1000;"></a-entity>
+        </a-scene>
+    </body>
+
+</html>

@@ -30,6 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="D:/01.PyCharm Project/Flask_demo" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -77,9 +78,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="712" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595607299482" />
-    <state x="647" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595649509405">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598028243777">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="647" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595649509405" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598028243777" />
+    <state x="647" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595734660624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="647" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595734660624" />
   </component>
 </project>
