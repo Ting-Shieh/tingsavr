@@ -1,11 +1,17 @@
 from aframe_app import app
 from aframe_app.views.aframe_views import AFrameViews
+from aframe_app.views.blog_views import BlogViews
+
+
+
+@app.route('/', methods=['GET'])
+def blog_index():
+    return BlogViews.index()
+
 
 # ------------------------------------------------------
 # 測試 AFrame
 # ------------------------------------------------------
-
-
 
 @app.route('/aframe01', methods=['GET'])
 def aframe01():

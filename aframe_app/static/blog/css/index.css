@@ -1,0 +1,141 @@
+
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  height: 1000px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: bold;
+}
+
+nav.navbar {
+  transition: 0.5s;
+}
+
+nav.navbar.fixed-top.navbar-expand-md.navbar-top {
+  background-color: transparent;
+}
+nav.navbar.fixed-top.navbar-expand-md.navbar-top a {
+  color: white;
+  transition: 0.5s;
+}
+nav.navbar.fixed-top.navbar-expand-md.navbar-top a:hover {
+  color: #ff6e3a;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  /*背景黏著方式 */
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+header.jumbotron .container {
+  color: white;
+  padding: 200px 0px;
+}
+header.jumbotron .container hr {
+  max-width: 50px;
+  border: solid 2px #ff6e3a;
+}
+header.jumbotron .container h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+section#section_ask {
+  background-color: #ff6e3a;
+}
+section#section_ask .col-sm-5.img {
+  height: 350px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQODWaoOS85U8XK1YDJyZERfXSjcz8-HsU4dA&usqp=CAU);
+  background-size: 100% 100%;
+  mix-blend-mode: multiply;
+}
+section#section_ask h2 {
+  margin-top: 130px;
+  padding: 0px 20px;
+}
+
+section#section_about .img_wrap {
+  height: 220px;
+  overflow: hidden;
+}
+section#section_about .img_wrap img {
+  width: 130%;
+}
+
+section#section_story {
+  background-color: #222;
+  color: white;
+  padding: 0;
+}
+section#section_story hr {
+  width: auto;
+  border: solid 1px #666;
+}
+section#section_story .col-sm-5 {
+  height: 400px;
+  background-image: url(https://stutzfamily.com/mrstutz/Maps/USHistory/europe1938.gif);
+  background-size: 100% auto;
+}
+section#section_story .col-sm-5 .cross {
+  color: red;
+  position: absolute;
+  left: 23%;
+  top: 40%;
+  font-size: 30px;
+  font-weight: bold;
+}
+section#section_story .col-sm-7 {
+  text-align: center;
+}
+section#section_story .col-sm-7 i {
+  font-size: 40px;
+}
+section#section_story .col-sm-7 .col-sm-12.features {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+section#section_future img {
+  width: 100%;
+}
+section#section_future i {
+  font-size: 30px;
+}
+section#section_future .future {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer.jumbotron {
+  text-align: center;
+  background-image: url(https://image.pttnews.cc/2018/07/21/0589642744/d90345a38dd427b35cdef13733d90768.jpg?redirect=true);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+footer.jumbotron .container {
+  color: white;
+  padding: 50px 0px;
+}
+footer.jumbotron .container hr {
+  max-width: 50px;
+  border: solid 2px #ff6e3a;
+}
+footer.jumbotron .container input {
+  background-color: transparent;
+  max-width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
